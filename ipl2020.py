@@ -22,7 +22,7 @@ def playelist(team):
         playerslist.append(player)
     return playerslist
 
-def playerChart(team):
+def playerChartData(team):
     playerschart = []
     playerdata = players.find({"label":team},{"_id":0,"player":1,"price":1})
     for chartdata in playerdata:
@@ -38,7 +38,7 @@ def totalPlayers():
     return total_playerslist
 
 
-def overallplayerChart():
+def overallplayerChartData():
     overallplayerschart = []
     overallplayerdata = players.find({},{"_id":0,"player":1,"price":1})
     for chartdata in overallplayerdata:
